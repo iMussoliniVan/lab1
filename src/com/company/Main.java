@@ -67,11 +67,25 @@ public class Main{
                 }
             });
         }
-        for (Food item: breakfast)
+        for (Food item: breakfast){
             if (item!=null)
                 item.consume();
             else
                 break;
+        }
+        int Apple = 0;
+        int Cheese = 0;
+        int Cocktail = 0;
+        for (Food item: breakfast){
+            if(item instanceof Apple){
+                Apple++;
+            }else if(item instanceof Cheese){
+                Cheese++;
+            }else if(item instanceof Cocktail) {
+                Cocktail++;
+            }
+        }
+        System.out.println("Яблоки: " + Apple + " Сыр: " + Cheese + " Коктлейли " + Cocktail);
         System.out.println("Всего хорошего!");
     }
 }

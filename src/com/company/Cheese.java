@@ -14,4 +14,15 @@ public class Cheese extends Food {
         return calories;
     }
 
+    public boolean equals(Object arg0) {
+        if (super.equals(arg0)) {
+            if (arg0 instanceof Cheese){
+                return true;
+            }else{
+                return false;
+            }
+        } else
+            return false;
+    }
+
 }
